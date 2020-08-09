@@ -30,6 +30,7 @@ function addBotText(text) {
 function botVoice(message) {
     const speech = new SpeechSynthesisUtterance();
     speech.text = "I don't have an answer for that. You might want to try the internet.";
+
     if (message.includes('hello') || message.includes('hi') || message.includes('hey')) {
       speech.text = "Hey, how can I help you?";
     }
@@ -314,6 +315,10 @@ function botVoice(message) {
       speech.text = " If you can use soap with water, it is a better thing. One uses soap more thoroughly and it helps clear the virus in between the fingers and under the nails. If you do not have soap, use hand sanitiser but clean your hands thoroughly and regularly."
     }
 
+    if (message.includes(' symptoms of covid-19') || message.includes(' symptoms of the coronavirus')) {
+      speech.text = "The most common symptoms of COVID-19 are fever, tiredness, and dry cough. Some patients may have aches and pains, nasal congestion, runny nose, sore throat or diarrhea. These symptoms are usually mild and begin gradually. Some people become infected but don’t develop any symptoms and don't feel unwell. Most people (about 80%) recover from the disease without needing special treatment. Around 1 out of every 6 people who gets COVID-19 becomes seriously ill and develops difficulty breathing. Older people, and those with underlying medical problems like high blood pressure, heart problems or diabetes, are more likely to develop serious illness. People with fever, cough and difficulty breathing should seek medical attention."
+    }
+
 
 
     speech.volume = 1;
@@ -339,3 +344,4 @@ recorder.onresult = (event) => {
 voice.addEventListener('click', () =>{
   recorder.start();
 });
+
