@@ -1,0 +1,14 @@
+<html> 
+	<body> 
+			<canvas id="myCanvas" width=200px height=200px style="border:1px solid #000000;"></canvas>
+			<script> 
+				const canvas = document.getElementById("myCanvas");
+				const context = canvas.getContext("2d"); 
+				
+				context.beginPath(); 
+				context.moveTo(10,10); 
+				context.lineTo(50, 25); 
+				context.stroke(); 
+			</script>
+	</body>
+</html>
